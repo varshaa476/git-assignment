@@ -1,5 +1,5 @@
 [
   {"id": 1, "name": "Laptop", "category": "Electronics"},
-  {"id": 2, "name": "Notebook", "category": "Stationery"},
+  {"id": 2, "name": "Diary", "category": "Stationery"},
   {"id": 3, "name": "Water Bottle", "category": "Accessories"}
 ]
