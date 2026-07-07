@@ -43,9 +43,31 @@ def submit():
 def success():
     return render_template("success.html")
 
+# master_1: To-Do frontend page
 @app.route("/todo")
 def todo():
     return render_template("todo.html")
+
+# master_2: To-Do backend API
+@app.route("/submittodoitem", methods=["POST"])
+def submit_todo_item():
+    try:
+        item_name = request.form.get("itemName")
+        item_description = request.form.get("itemDescription")
+
+        if not item_name or not item_description:
+            return jsonify({"error": "itemName and itemDescription are required."}), 400
+
+        todo_collection = db["todo_items"]
+        todo_collection.insert_one({
+            "itemName": item_name,
+            "itemDescription": item_description
+        })
+
+        return jsonify({"message": "To-do item added successfully"}), 200
+
+    except PyMongoError as e:
+        return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
