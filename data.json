@@ -1,5 +1,6 @@
 [
-  {"id": 1, "name": "Laptop", "category": "Electronics"},
-  {"id": 2, "name": "Diary", "category": "Stationery"},
-  {"id": 3, "name": "Water Bottle", "category": "Accessories"}
+  {"id": 1, "name": "Gaming Laptop", "category": "Electronics"},
+  {"id": 2, "name": "Notebook", "category": "Stationery"},
+  {"id": 3, "name": "Water Bottle", "category": "Accessories"},
+  {"id": 4, "name": "Wireless Mouse", "category": "Electronics"}
 ]
